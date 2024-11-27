@@ -50,8 +50,6 @@ public class MainApp {
       List<Car> cars = carService.listCar();
       cars.stream().forEach(System.out :: println);
 
-      //System.out.println(userService.getUserByCar("car2", 2));
-
       context.close();
    }
 }

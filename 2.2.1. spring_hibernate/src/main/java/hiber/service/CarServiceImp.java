@@ -11,8 +11,11 @@ import java.util.List;
 @Service
 public class CarServiceImp implements CarService {
 
-    @Autowired
-    private CarDao carDao;
+    private final CarDao carDao;
+
+    public CarServiceImp(CarDao carDao) {
+        this.carDao = carDao;
+    }
 
     @Override
     @Transactional(readOnly = true)
